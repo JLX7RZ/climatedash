@@ -47,4 +47,4 @@ app.layout = html.Div([html.H1('My First Spicy Dash', style={'textAlign': 'cente
 
 
 if __name__ == '__main__':
-     app.run_server(port=8092)
+     app.run_server()
