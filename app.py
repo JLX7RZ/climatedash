@@ -15,7 +15,7 @@ df_avg = df.drop(columns= ["date", "alpha-3", "region"])
 
 ani_map = px.choropleth(df,  
                          locations = "alpha-3", 
-                         projection = "mercator",
+                         projection = "hammer",
                          animation_frame="date",
                          scope = "europe", 
                          color = "avg_temp",
@@ -35,6 +35,8 @@ data_map = dcc.Graph(figure=ani_map)
 app =dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
 
 server = app.server
+
+# center={'lon':62.4, lat':-96.466667}
 
 # set app layout
 
