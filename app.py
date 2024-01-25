@@ -20,7 +20,11 @@ ani_map = px.choropleth(df,
                          scope = "europe", 
                          color = "avg_temp",
                         range_color=(-30, 45),
+                        width=1000, height=1080, 
+                        center =dict(lon=52.21,lat=9.55),
                         fitbounds="locations")
+
+ani_map.update_geos(fitbounds="locations", visible=True)
 
 ani_map = ani_map.update_layout(
         plot_bgcolor="#222222", paper_bgcolor="#222222", font_color="white", geo_bgcolor="#222222")
