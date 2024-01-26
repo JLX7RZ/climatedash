@@ -64,6 +64,7 @@ linegraph = dcc.Graph(figure=linegraph)
 app =dash.Dash(external_stylesheets=[dbc.themes.DARKLY])
 
 #dropdowns:
+server = app.server
 
 dropdown_fulltable = dcc.Dropdown(df["country"], df["country"],  clearable=False)#,multi=True)
 
