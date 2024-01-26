@@ -6,7 +6,7 @@ import pandas as pd
 import dash_bootstrap_components as dbc
 
 
-df = pd.read_csv("../data/climatedashmonthly.csv")
+df = pd.read_csv("./climatedashmonthly.csv")
 df = df.sort_values(by = "yearmonth")
 
 df_t = pd.DataFrame(df["country"].unique(), df["alpha-3"].unique())
